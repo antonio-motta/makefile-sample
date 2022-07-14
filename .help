@@ -1,3 +1,4 @@
+#!make
 .PHONY: help
 # COLORS
 GREEN  := $(shell tput -Txterm setaf 2)
@@ -15,7 +16,7 @@ help:
 		if (helpMessage) { \
 			helpCommand = substr($$1, 0, index($$1, ":")-1); \
 			helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
-			printf " ${YELLOW}%-$(TARGET_MIN_LENGTH_CHAR)s:${RESET}${GREEN}%s${RESET}\n", helpCommand, helpMessage; \
+			printf "  ${YELLOW}%-$(TARGET_MIN_LENGTH_CHAR)s- ${RESET}${GREEN}%s${RESET}\n", helpCommand, helpMessage; \
 		} \
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)

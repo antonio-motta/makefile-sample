@@ -1,10 +1,10 @@
 #!make
 include .help
 
-##Hello World
+## Hello World
 hello:
 	@echo "Hello World $(name)"
 
-##Target example for help test
+## Target example for help test
 test:
 	@echo "target test"
